@@ -7,24 +7,29 @@
 </head>
 <body>
 
-<div>
-	<input id="searchWord" type="text" name="filter" placeholder="search term here">
+<div class="row">
+<div class="col-3 pt-5 pl-5">
+
+	<input class="m-2"  id="searchWord" type="text" name="filter" placeholder="search term here">
 	
-	<select id="orient">
-	<option disabled="yes" selected="selected">Choose orientation</option>p
-  <option value="portrait">Portrait</option>
-  <option value="landscape">Landscape</option>
-  <option value="squarish">Squarish</option>
+	<select class="m-2"  id="orient">
+	<option disabled="yes" selected="selected" value="portrait">Choose orientation</option>p
+  	<option value="portrait">Portrait</option>
+  	<option value="landscape">Landscape</option>
+  	<option value="squarish">Squarish</option>
 </select>
 
-<button id="searchButton" value="hi">SEARCH</button>
+<p class="m-2" ># of photos (max 30)</p>
+<input class="m-2"  id="numbers" type="text" name="filter"value="15" >
+
+<button class="m-2" id="searchButton" value="hi">SEARCH</button>
 </div>
 
-	<div id="tester" class="container">
+	<div id="tester" class="col-9">
 		<div id="dump" class="row">
 		</div>
 	</div>
-
+</div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

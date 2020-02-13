@@ -6,7 +6,7 @@ key = k[0].key;
 function test(){
   $.ajax({
 
-    url:`https://api.unsplash.com/photos/random/?client_id=${key}&count=12&query=${keyword}&orientation=${orient}`,
+    url:`https://api.unsplash.com/photos/random/?client_id=${key}&count=${number}&query=${keyword}&orientation=${orient}`,
     type:'GET',
     data:'json',
     success: function(data) {
@@ -45,16 +45,40 @@ input.addEventListener("keyup", function(event) {
 
 var keyword = "";
 var orient = "squarish";
+var number = "15";
 
 test()
 
 document.getElementById('searchButton').addEventListener('click', function(e){
   // e.preventDefault();
-  keyword = document.getElementById('searchWord').value;
+  keyword = document.getElementById('searchWord').value; 
   console.log(keyword)
   orient = document.getElementById('orient').value;
   console.log(orient)
+  number = document.getElementById('numbers').value;
+  console.log(number)
   document.getElementById('dump').innerHTML = "";
   test();
 
 });
+
+// document.getElementById('numbers').addEventListener('input', function(){
+//    allowNumbersOnly()
+// })
+
+// function allowNumbersOnly(e) {
+//     var code = (e.which) ? e.which : e.keyCode;
+//     if (code > 31 && (code < 48 || code > 57)) {
+//         e.preventDefault();
+//     }
+// }
+
+// var input = document.getElementById("searchWord");
+// Execute a function when the user releases a key on the keyboard
+// document.getElementById('numbers').addEventListener('input', function(e) {
+//   // Number 13 is the "Enter" key on the keyboard
+//     var code = (e.which) ? e.which : e.keyCode;
+//     if (code > 31 && (code < 48 || code > 57)) {
+//         e.preventDefault();
+//   }
+// });
