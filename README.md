@@ -1,4 +1,4 @@
 # splash-search 
 
-To add your unSplash api key create a .json file within js titled key.json, then add the key within 
+To add your unSplash api key open the file titled key.json within the js folder, then add your key within 
 apiKey = '[{"key":"YOUR KEY HERE"}]'
